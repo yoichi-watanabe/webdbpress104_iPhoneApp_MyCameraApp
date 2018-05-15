@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCameraApp/AppDelegate.swift"
+            timestampString = "548093148.33372"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyCameraApp.AppDelegate.__deallocating_deinit"
+                  moduleName = "MyCameraApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabeyouichi/work/10_programing/swift/MyCameraApp/MyCameraApp/AppDelegate.swift"
+                  timestampString = "548086627.8593889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyCameraApp.AppDelegate.__allocating_init() -&gt; MyCameraApp.AppDelegate"
+                  moduleName = "MyCameraApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabeyouichi/work/10_programing/swift/MyCameraApp/MyCameraApp/AppDelegate.swift"
+                  timestampString = "548086627.877092"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyCameraApp.AppDelegate.init() -&gt; MyCameraApp.AppDelegate"
+                  moduleName = "MyCameraApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabeyouichi/work/10_programing/swift/MyCameraApp/MyCameraApp/AppDelegate.swift"
+                  timestampString = "548086627.882575"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "MyCameraApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabeyouichi/work/10_programing/swift/MyCameraApp/MyCameraApp/AppDelegate.swift"
+                  timestampString = "548086627.886453"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

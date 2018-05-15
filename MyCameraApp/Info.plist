@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>カメラで撮影した写真を表示します</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>加工した画像をアルバムに保存します</string>
 </dict>
 </plist>
