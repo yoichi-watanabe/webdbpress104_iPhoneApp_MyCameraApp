@@ -37,7 +37,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         // Twitterハッシュタグ
         let shareText = "#MyCameraApp"
-
         // UIActivity に渡す項目
         let activityItems: [Any] = [shareText, resizedImage]
         
