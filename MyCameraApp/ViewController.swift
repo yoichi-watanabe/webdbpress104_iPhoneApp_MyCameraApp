@@ -89,6 +89,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // モーダルを閉じる
         picker.dismiss(animated: true)
     }
+    
+    @IBAction func didTouchMakeNotificationButton(_ sender: Any) {
+        print("通知登録ボタンをタッチしました")
+    }
+    
+    @IBAction func didTouchClearNotificationButton(_ sender: Any) {
+        print("通知解除ボタンをタッチしました")
+    }
+    
+    @IBAction func swipeRight(_ sender: Any) {
+        // 処理なし
+    }
+    
+    @IBAction func swipeLeft(_ sender: Any) {
+        // 処理なし
+    }
+    
+    func doFilter(image: UIImage, filterName: String) -> UIImage {
+        // CIImageを作成
+        let ciImage = CIImage(image: image)
+        
+        // CIFilterクラスのインスタンスを生成し、CIImageを渡す
+        let filter = CIFilter(name: filterName)!
+        filter
+    }
 }
 
 extension UIImage {
