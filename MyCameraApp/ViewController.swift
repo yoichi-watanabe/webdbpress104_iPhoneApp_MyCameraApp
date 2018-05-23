@@ -80,10 +80,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // 撮影画像の取得
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = image
+            // 画像の向きを修正
+            let fixedImage = image.correctlyOrientedImage()
             
-            // 撮影画像をフォトライブラリに保存する
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            // 画像フィルタ処理を行う
+            let filteredImage = doFilter(image: fixedImage, filterName: "CIPhotoEffectMono")
+            
+            // 加工した画像を表示・保存
+            imageView.image = filteredImage
+            UIImageWriteToSavedPhotosAlbum(filteredImage, nil, nil, nil)
         }
         
         // モーダルを閉じる
@@ -112,7 +117,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // CIFilterクラスのインスタンスを生成し、CIImageを渡す
         let filter = CIFilter(name: filterName)!
-        filter
+        filter.setValue(ciImage, forKey: kCIInputImageKey)
+        
+        // CIContextクラスを用いて画像を加工
+        let ciContext = CIContext(options: nil)
+        let filteredImage = filter.outputImage!
+        let imageRef = ciContext.createCGImage(filteredImage,
+                                               from: filteredImage.extent)
+        
+        // CIImageからUIImageへ変換
+        let outputImage = UIImage(cgImage: imageRef!,
+                                  scale: image.scale,
+                                  orientation: image.imageOrientation)
+
+        return outputImage
     }
 }
 
@@ -137,6 +155,17 @@ extension UIImage {
         UIGraphicsEndImageContext()
         
         return resizedImage
+    }
+}
+
+extension UIImage {
+    // 画像オリエンテーション修正処理
+    func correctlyOrientedImage() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(in: CGRect(origin: .zero, size: size))
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
     }
 }
 
